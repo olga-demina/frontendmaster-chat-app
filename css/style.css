@@ -19,6 +19,7 @@ img {
   --dark-grayish-violet: hsl(270, 7%, 64%);
   --light-grayish-violet: hsl(270, 20%, 96%);
   --grayish-blue: hsl(206, 6%, 79%);
+  --grayish-pink: hsl(290, 37%, 97%);
   --light-magenta: hsl(293, 100%, 63%);
   --very-light-magenta: hsl(289, 100%, 72%);
   --light-violet: hsl(264, 100%, 61%);
@@ -39,6 +40,7 @@ img {
   /* Phone */
   --phone-height: 507px;
   --phone-width: 247px;
+  --phone-shadow: 10px 6px 44px rgba(110, 93, 126, 0.5);
 }
 
 /*************** COMMON *************/
@@ -79,8 +81,42 @@ p {
 
 /*************** MAIN CONTENT ************/
 #main-content {
+  position: relative;
   min-height: 100vh;
   padding: 8rem 0px;
+  overflow: hidden;
+}
+
+/* Main content background decorations */
+#main-content::before,
+#main-content::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 85vh;
+  min-height: 500px;
+  width: 500px;
+  z-index: -1;
+}
+
+#main-content::before {
+  top: 0;
+  left: 0;
+  transform: translateX(-60%);
+  border-radius: 0 0 50% 50%;
+  background-image: linear-gradient(
+    to bottom left,
+    var(--light-magenta),
+    var(--light-violet) 60%
+  );
+}
+
+#main-content::after {
+  bottom: 0;
+  left: 100%;
+  transform: translateX(-30%);
+  border-radius: 50% 50% 0 0;
+  background-color: var(--grayish-pink);
 }
 
 /* Phone */
@@ -93,7 +129,7 @@ p {
   width: var(--phone-width);
   background-color: var(--app-background);
   border: 8px solid var(--white);
-  box-shadow: 10px 6px 44px rgba(110, 93, 126, 0.5);
+  box-shadow: var(--phone-shadow);
   border-radius: 30px;
 }
 
@@ -119,7 +155,6 @@ p {
 /************** MEDIA QUERIES ***********/
 
 @media screen and (min-width: 1040px) {
-
   /* Layout */
   .container {
     max-width: 840px;
@@ -135,6 +170,20 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  #main-content::before,
+  #main-content::after {
+    width: 600px;
+  }
+
+  /* Main content background decorations */
+  #main-content::before {
+    transform: translateX(-30%);
+  }
+
+  #main-content::after {
+    transform: translateX(-70%);
   }
 
   /* Text column*/
