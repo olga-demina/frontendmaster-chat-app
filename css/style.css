@@ -13,6 +13,7 @@ img {
 :root {
   /*Theme Colors */
   --pale-violet: hsl(276, 100%, 81%);
+  --pale-light-violet: hsl(270, 37%, 93%);
   --moderate-violet: hsl(276, 55%, 52%);
   --dark-violet: hsl(271, 15%, 43%);
   --very-dark-violet: hsl(271, 36%, 24%);
@@ -28,6 +29,7 @@ img {
   /* Semantic colors */
   --app-subheading: var(--pale-violet);
   --left-chat-text: var(--moderate-violet);
+  --left-chat-background: (--pale-lght-violet);
   --right-chat-text: var(--dark-violet);
   --placeholder-text: var(--grayish-blue);
   --main-heading: var(--very-dark-violet);
@@ -119,7 +121,7 @@ p {
   background-color: var(--grayish-pink);
 }
 
-/* Phone */
+/* PHONE */
 .image-col {
   margin-bottom: 8rem;
 }
@@ -131,8 +133,204 @@ p {
   border: 8px solid var(--white);
   box-shadow: var(--phone-shadow);
   border-radius: 30px;
+  overflow: hidden;
 }
 
+/* Phone header */
+
+.phone-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to right, var(--light-violet), var(--light-magenta));
+  padding: 2.8rem 1.2rem 1.2rem;
+  border-radius: 0 0 8px 8px;
+}
+
+.phone-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1.9rem;
+  width: 12.9rem;
+  border-radius: 0 0 12px 12px;
+  background-color: var(--white);
+}
+
+.btn-back {
+  position: relative;
+  display: inline-block;
+  color: var(--white);
+  margin-right: 1rem;
+  align-self: stretch;
+  /* Hide text for accessability */
+  font-size: 0;
+}
+
+.btn-back::before,
+.btn-back::after {
+  content: "";
+  height: .8rem;
+  width: 2px;
+  background-color: var(--white);
+  position: absolute;
+  border-radius: 10px;
+}
+
+.btn-back::before {
+  bottom: 47%;
+  left: 0;
+  transform: rotate(25deg);
+}
+
+.btn-back::after{
+  top: 47%;
+  left: 0;
+  transform: rotate(-25deg);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.user-avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+
+.user-signature {
+  margin-left: 1rem;
+}
+
+.user-name {
+  font-size: 1.3rem;
+  color: var(--grayish-pink);
+}
+
+.user-status {
+  font-size: 1rem;
+  color: var(--app-subheading);
+}
+
+.btn-menu {
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+/* Messages */
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem 1.4rem;
+}
+
+.message {
+  max-width: 65%;
+  font-size: .8rem;
+  line-height: 1.4;
+  font-weight: 400;
+  padding: .6rem 1rem;
+  margin-bottom: .6rem;
+}
+
+.message.left {
+  color: var(--left-chat-text);
+  background-color: var(--pale-light-violet);
+  border-radius: 10px 10px 10px 5px;
+}
+
+.message.right {
+  align-self: flex-end;
+  color: var(--right-chat-text);
+  background-color: var(--white);
+  border-radius: 10px 10px 5px 10px;
+}
+
+.message.pictures {
+  width: 70%;
+  max-width: unset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: unset;
+  border-radius: 0;
+}
+
+.message.pictures img {
+  width: 30%;
+  border-radius: 24%;
+}
+
+.message.offer {
+  display: flex;
+  align-items: center;
+  color: var(--light-grayish-violet);
+  background-image: linear-gradient(to right, var(--light-magenta), var(--light-violet));
+}
+
+.message.offer input[type="radio"] {
+  appearance: none;
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  border: 1px solid var(--light-grayish-violet);
+  margin-right: 1rem;
+  margin-top: -.2rem;
+}
+
+.message.offer label {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message.offer .price {
+  font-size: 1.4rem;
+  font-weight: 600;
+  align-self: center;
+}
+
+/* Phone message input */
+.message-input {
+  position: relative;
+  margin-top: 1.6rem;
+}
+
+.message-input input {
+  width: 100%;
+  padding: 1.4rem 1.8rem;
+  border-radius: 30px;
+  border: 0;
+  font-size: 1rem;
+}
+
+.message-input input::placeholder {
+  color: lightgray;
+}
+
+.message-input .btn-send {
+  position: absolute;
+  top: .4rem;
+  right: .4rem;
+  display: inline-block;
+  color: white;
+  width: 3.2rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--main-heading);
+}
+
+/* TEXT CONTENT */
 /* Text column*/
 
 .text-col {

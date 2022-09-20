@@ -22,6 +22,15 @@
       rel="stylesheet"
     />
 
+    <!-- Font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- Custom styles -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -32,13 +41,82 @@
         <div class="container">
           <div class="row">
             <div class="image-col">
-              
-              <!-- App image -->
+              <!-- App phone image -->
               <div class="phone">
+                <!-- Phone header -->
+                <header class="phone-header">
+                  <a href="" class="btn-back">Back</a>
+                  <div class="user-info">
+                    <img
+                      class="user-avatar"
+                      src="images/avatar.jpg"
+                      alt="User avatar image"
+                    />
+                    <div class="user-signature">
+                      <h3 class="user-name">Samuel Green</h3>
+                      <p class="user-status">Available to Walk</p>
+                    </div>
+                  </div>
+                  <a href="" class="btn-menu">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </a>
+                </header>
+                <!-- /Phone header -->
 
+                <div class="messages-container">
+                  <!-- Phone messages -->
+                  <!-- Message -->
+                  <div class="message left">
+                    That sounds great. I'd be happy with that.
+                  </div>
+                  <!-- Message -->
+                  <div class="message left">
+                    Could you send over some pictures of your dog please?
+                  </div>
+                  <!-- Message -->
+                  <div class="message pictures right">
+                    <img src="images/dog-image-1.jpg" alt="" />
+                    <img src="images/dog-image-2.jpg" alt="" />
+                    <img src="images/dog-image-3.jpg" alt="" />
+                  </div>
+                  <!-- Message -->
+                  <div class="message right">
+                    Here are a few new pictures. She's a happy girl!
+                  </div>
+                  <!-- Message -->
+                  <div class="message right">Can you make it?</div>
+                  <!-- Message -->
+                  <div class="message left">
+                    She looks so happy! The time we discussed works. How long
+                    shall I take her out for?
+                  </div>
+                  <!-- Message -->
+                  <div class="message left offer">
+                    <input name="duration" type="radio" id="30min" />
+                    <label for="30min">
+                      <span class="description"> 30 minute walk </span>
+                      <span class="price">$29</span>
+                    </label>
+                  </div>
+                  <!-- Message -->
+                  <div class="message left offer">
+                    <input name="duration" type="radio" id="60min" />
+                    <label for="60min">
+                      <span class="description"> 1 hour walk </span>
+                      <span class="price">$49</span>
+                    </label>
+                  </div>
+                  <!-- /Phone messages -->
+
+                  <!-- Message input -->
+                  <div class="message-input">
+                    <input type="text" placeholder="Type a message.." />
+                    <i class="btn-send fa-solid fa-chevron-right"></i>
+                  </div>
+                  <!-- /Message input -->
+                </div>
               </div>
               <!-- /App image -->
-
             </div>
             <div class="text-col">
               <h2 class="text-heading">Simple booking</h2>
