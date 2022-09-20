@@ -145,6 +145,8 @@ p {
   background-image: linear-gradient(to right, var(--light-violet), var(--light-magenta));
   padding: 2.8rem 1.2rem 1.2rem;
   border-radius: 0 0 8px 8px;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, .1);
+
 }
 
 .phone-header::before {
@@ -250,6 +252,7 @@ p {
   color: var(--right-chat-text);
   background-color: var(--white);
   border-radius: 10px 10px 5px 10px;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, .1);
 }
 
 .message.pictures {
@@ -260,6 +263,7 @@ p {
   justify-content: space-between;
   background-color: unset;
   border-radius: 0;
+  box-shadow: none;
 }
 
 .message.pictures img {
