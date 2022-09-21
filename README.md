@@ -26,8 +26,13 @@ Users should be able to:
 - View the optimal layout for the component depending on their device's screen size
 - **Bonus**: See the chat interface animate on the initial load
 
+The phone with app is made internally in css. All the dimentions, spacings ecc are based on the size of message text font. So, changing this will scale the phone.
+
+
 ### Screenshots
 
+![](./images/screen-desktop.png)
+![](./images/screen-mobile.png)
 
 
 ### Links
@@ -43,18 +48,6 @@ Users should be able to:
 - Flexbox
 - Pseudoelements
 - Mobile-first workflow
-
-
-### What I learned
-
-
-
-### Continued development
-
-
-
-### Useful resources
-
 
 
 ## Author
