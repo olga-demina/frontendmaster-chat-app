@@ -37,7 +37,7 @@ The phone with app is made internally in css. All the dimentions, spacings ecc a
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://olga-demina-frontendmaster-chat-app.netlify.app)
+- Live Site URL: [frontendmaster chat app](https://olga-demina-frontendmaster-chat-app.netlify.app)
 
 ## My process
 
